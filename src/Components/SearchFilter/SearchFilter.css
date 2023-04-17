@@ -1,0 +1,21 @@
+.search-input input{
+    border: transparent;
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.527);
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.search-input input:focus{
+    outline: transparent;
+}
+
+.search-button{
+    background-color: rgb(111, 204, 250);
+    border: transparent;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 15px;
+    padding: 5px 8px;
+    border-radius: 6px;
+}

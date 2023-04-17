@@ -1,0 +1,11 @@
+.inner-ErrorrPage{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.inner-ErrorrPage img{
+    width: 22rem;
+    margin: 15px 0;
+    opacity: 0.8;
+}

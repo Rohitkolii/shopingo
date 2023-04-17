@@ -1,0 +1,120 @@
+.FeaturedPost{
+    /* width: 100%; */
+    height: 100%;
+}
+.FeaturedPost-container{
+    background-color: rgb(222, 242, 252);
+    padding: 30px 0px;
+}
+.inner-FeaturedPost{
+    width: 80%;
+    height: 28rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FeaturedPost-text{
+    width: 50%;
+    line-height: 25px;
+}
+
+.Featuredpost-price p:nth-child(1){
+    color: rgb(70, 192, 253);
+}
+
+.FeaturedPost h2{
+    color: rgb(44, 41, 41);
+    font-size: 32px;
+    margin: 10px 0px;
+}
+
+.Featuredpost-price{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.Featuredpost-price p{
+    color: rgb(42, 49, 53);
+    font-size: 22px;
+}
+
+.Featuredpost-price del{
+    margin-left: 15px;
+    color: black;
+    font-size: 15px;
+}
+
+.Featuredpost-price a{
+    margin-left: 50px;
+    /* background-color: rgb(111, 204, 250); */
+    padding: 6px 18px;
+    /* text-decoration: none; */
+    color: white;
+    /* border-radius: 20px; */
+    font-size: 14px;
+    transition: .7s;
+}
+
+.Featuredpost-price a:hover{
+    background-color: rgb(76, 183, 236);
+}
+
+.FeaturedPost-img{
+    width: 20rem;
+    height: 20rem;
+    margin: auto;
+    background-color: white;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.FeaturedPost-img img{
+    width: 90%;
+    transform: scaleX(-1);
+}
+
+.Offertimer{
+    margin: 25px 0;
+    width: 250px;
+}
+
+.Offertimer p{
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 920px){
+    .inner-FeaturedPost{
+        flex-direction: column-reverse;
+        height: auto;
+        width: 95%;
+        text-align: center;
+    }
+
+    .FeaturedPost-img{
+        margin-bottom: 80px;
+    }
+
+    .FeaturedPost-text{
+        width: 95%;
+    }
+
+    .FeaturedPost-text h2{
+        line-height: 30px;
+    }
+
+    .Featuredpost-price{
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+    }
+
+    .Offertimer{
+        width: 50%;
+        margin: auto;
+    }
+
+}

@@ -1,0 +1,195 @@
+.ShopPost{
+    display: grid;
+    padding: 20px 0;
+}
+
+.ShopPost-Card:nth-child(1){
+    grid-row: 1/ span 1;
+}
+.ShopPost-Card:nth-child(2){
+    grid-row: 1/ span 1;
+}
+.ShopPost-Card:nth-child(3){
+    grid-row: 1/ span 1;
+}
+.ShopPost-Card:nth-child(4){
+    grid-row: 2/ span 1;
+}
+.ShopPost-Card:nth-child(5){
+    grid-row: 2/ span 1;
+}
+
+.ShopPost-Card{
+    width: 13rem;
+    background-color: white;
+    /* padding: 5px; */
+    border-radius: 2px;
+    /* border: 1px solid rgba(128, 126, 126, 0.404); */
+    box-shadow: 1px 1px 5px rgba(189, 189, 189, 0.651);
+    margin: 15px auto;
+    transition: .5s;
+}
+
+.ShopPost-Card a{
+    text-decoration: none;
+    color: #252525;
+}
+
+.ShopPost-Card:hover{
+    transform: scale(105%);
+}
+
+.ShopPost-img{
+    width: 100%;
+    /* padding: 1px; */
+    height: 10rem;
+    /* border-radius: 2px; */
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.425);
+    /* background-color: #c6edffd5; */
+}
+
+.ShopPost-img img{
+    height: 100%;
+    border-radius: 2px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ShopPost-descriptopn h5{
+    padding: 0;
+    color: #252525;
+}
+
+.ShopPost-descriptopn{
+    /* background-color: #b4e6fd; */
+    padding: 5px;
+}
+
+.ShopPost-descriptopn p{
+    font-size: 14px;
+}
+
+.ShopPost-descriptopn .desc-price{
+    font-size: 15px;
+    font-weight: 400;
+    /* color: #54bbeb; */
+}
+
+.ShopPost-descriptopn .desc-price span{
+    font-size: 17px;
+}
+
+/* .add-btn{
+    display: flex;
+    justify-content: right;
+} */
+
+.add-btn button:hover{
+    background-color: rgb(32, 31, 31);
+}
+
+.add-btn a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    /* border-radius: 6px; */
+    transition: .5s;
+}
+
+@media only screen and (max-width: 1150px){
+    .ShopPost-Card:nth-child(4){
+        grid-row: 2/ span 1;
+    }
+}
+
+@media only screen and (max-width: 830px){
+    .ShopPost-Card:nth-child(1){
+        grid-row: 1/ span 1;
+    }
+
+    .ShopPost-Card:nth-child(2){
+        grid-row: 1/ span 1;
+    }
+    
+    .ShopPost-Card:nth-child(3){
+        grid-row: 2/ span 1;
+    }
+
+    .ShopPost-Card:nth-child(4){
+        grid-row: 2/ span 1;
+    }
+
+    .ShopPost-Card:nth-child(5){
+        grid-row: 3/ span 1;
+    }
+
+
+}
+
+@media only screen and (max-width: 610px){
+    .ShopPost-Card{
+        width: 12rem;
+        background-color: white;
+    }
+
+    .ShopPost-img{
+        height: 15rem;
+    }
+}
+
+@media only screen and (max-width: 460px){
+    .ShopPost-Card{
+        width: 10rem;
+        background-color: white;
+    }
+
+    .ShopPost-img{
+        height: 12rem;
+    }
+}
+
+@media only screen and (max-width: 380px){
+   
+    
+    .ShopPost-Card{
+        width: 8rem;
+        background-color: white;
+    }
+    
+    .ShopPost-img{
+        height: 10rem;
+    }
+}
+
+@media only screen and (max-width: 310px){
+    
+    .ShopPost-Card:nth-child(1){
+        grid-row: 1/ span 1;
+    }
+
+    .ShopPost-Card:nth-child(2){
+        grid-row: 2/ span 1;
+    }
+    
+    .ShopPost-Card:nth-child(3){
+        grid-row: 3/ span 1;
+    }
+    
+    .ShopPost-Card:nth-child(4){
+        grid-row: 4/ span 1;
+    }
+    
+    .ShopPost-Card:nth-child(5){
+        grid-row: 5/ span 1;
+    }
+
+    .ShopPost-Card{
+        width: 95%;
+        background-color: white;
+    }
+    
+    .ShopPost-img{
+        height: 18rem;
+    }
+
+    }

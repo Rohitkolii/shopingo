@@ -1,0 +1,10 @@
+.ColorSelector button{
+    background-color: transparent;
+    border: transparent;
+    color: #252525;
+}
+
+.inner-ColorSelector h1{
+    font-size: 22px;
+    font-weight: 500;
+}

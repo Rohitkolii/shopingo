@@ -1,0 +1,57 @@
+.CollapseCard{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.inner-CollapseCard{
+    /* margin: 0px 10px; */
+    display: grid;
+    grid-gap: 10px;
+}
+
+
+.Cards{
+    /* margin: 10px; */
+    border-radius: 15px;
+    background-color: rebeccapurple;
+}
+
+.Cards a{
+    color: white;
+    text-decoration: none;
+}
+
+.first{
+    width: 20rem;
+    height: 18rem;
+    grid-column: 1/ span 2;
+    grid-row: 1;
+}
+.second{
+    width: 20rem;
+    height: 25rem;
+    grid-column: 2;
+    grid-row: 1;
+}
+.third{
+    width: 20rem;
+    height: 18rem;
+    grid-column: 3;
+    grid-row: 1;
+}
+.four{
+    width: 20rem;
+    height: 25rem;
+}
+.five{
+    width: 20rem;
+    height: 18rem;
+}
+.six{
+    width: 20rem;
+    height: 25rem;
+}
+
+/* .Cards img{
+    width: 10rem;
+} */

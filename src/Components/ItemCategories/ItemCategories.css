@@ -1,0 +1,31 @@
+.inner-ItemCategories{
+    display: flex;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    /* width: 20rem; */
+    /* text-align: center; */
+    padding: 20px 0;
+    transition: 1s;
+}
+
+.inner-ItemCategories h1{
+    color: #252525;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.inner-ItemCategories button{
+    color: #252525;
+    background-color: transparent;
+    border: transparent;
+}
+.inner-ItemCategories .ItemCategories-btn ul button{
+    /* display: flex; */
+    /* flex-direction: column; */
+    display: block;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
