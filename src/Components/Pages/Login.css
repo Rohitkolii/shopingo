@@ -4,7 +4,8 @@
 }
 .Login-intro{
     width: 60%;
-    background-color: rgb(111, 204, 250);
+    /* background-color: rgb(111, 204, 250); */
+    background-color: #614BC3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +70,8 @@
     display: block;
     width: 15rem;
     height: 15rem;
-    background-color: rgb(111, 204, 250);
+    /* background-color: rgb(111, 204, 250); */
+    background-color: #614BC3;
     border-radius: 50%;
 }
 

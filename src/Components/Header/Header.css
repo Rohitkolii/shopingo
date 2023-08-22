@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
 .headerBanner{
     width: 100%;
     height: 100vh;
     /* padding: 0px 50px; */
-    background-color: rgb(222, 242, 252);
+    /* background-color: rgb(222, 242, 252); */
     /* overflow-x: hidden; */
+    background-color: rgb(247, 247, 247);
 }
 .inner-header{
     display: flex;
@@ -15,18 +18,20 @@
 }
 
 .inner-header img{
-    width: 19rem;
+    width: 100%;
+    transform: rotate(-12deg);
+    filter: drop-shadow(1px 1px 5px rgba(60, 3, 146, 0.666));
 }
 
 .header-img{
-    background-color: rgb(255, 255, 255);
-    width: 28rem;
-    height: 28rem;
+    /* background-color: rgb(255, 255, 255); */
+    width: 25rem;
+    /* height: 28rem; */
     text-align: center;
     border-radius: 100%;
 }
 
-.header-img::after{
+/* .header-img::after{
     margin: auto;
     content: '';
     width: 52%;
@@ -36,11 +41,34 @@
     background-color: transparent;
     box-shadow: 0px 15px 5px rgba(128, 128, 128, 0.5);
     display: block;
+} */
+
+.header-title{
+    position: relative;
 }
 
 .header-title h1{
-    font-size: 45px;
-    color: rgb(58, 56, 56);
+    font-size: 42px;
+    font-weight: 600;
+    /* color: rgb(58, 56, 56); */
+    color: black;
+    text-transform: uppercase;
+}
+
+.header-title p:nth-child(1){
+    font-size: 15px;
+}
+
+.sale-h{
+    font-size: 90px;
+    position: absolute;
+    bottom: -25px;
+    right: 25%;
+    z-index: 5;
+    color: #614BC3;
+    font-weight: 600;
+    font-family: 'Allura', cursive;
+    transform: rotate(-13deg);
 }
 
 .inner-header a{
@@ -99,10 +127,11 @@
     .inner-header{
         display: flex;
         flex-direction: column-reverse;
-        top: 0;text-align: center;
+        top: 10;
+        text-align: center;
     }
     .header-title{
-        margin-top: 55px;
+        margin-top: 20px;
     }
     .header-img img{
         width: 13rem;
@@ -111,6 +140,10 @@
     .headerBanner{
         padding: 0px 0px;
        
+    }
+
+    .inner-header a{
+        top: 45px;
     }
 }
 

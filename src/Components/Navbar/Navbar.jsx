@@ -2,9 +2,12 @@ import { useState } from 'react'
 import './Navbar.css'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import Button from '../Button/Button'
+import { useCartContext } from '../Context/CartContext'
 const { Link } = require("react-router-dom")
 
 const Navbar = () => {
+
+    const {cart} = useCartContext()
 
     const [hamburger, sethamburger] = useState(false)
 
@@ -27,7 +30,7 @@ const Navbar = () => {
                     <li><Link to='/blogs'>Blogs</Link></li>
                     <li><Link to='/more'>More</Link></li>
                     <Button Links={Links}/>
-                    <li className='carti'><Link to='/cart'><AiOutlineShoppingCart className="cart-btn" /><span>3</span></Link></li>
+                    <li className='carti'><Link to='/cart'><AiOutlineShoppingCart className="cart-btn" /><span>{cart.length !== 0 ? cart.length : '0'}</span></Link></li>
                 </ul>
             </div>
 

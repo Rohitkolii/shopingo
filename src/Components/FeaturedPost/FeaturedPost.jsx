@@ -25,7 +25,7 @@ const FeaturedPost = () => {
                             <Button Links={Links}/>
                         </div>
                         <div className='Offertimer'>
-                            <p>Ends in</p>
+                            <p>Sale Ends in</p>
                             <CountDownTimer Time={Time} />
                         </div>
                     </div>

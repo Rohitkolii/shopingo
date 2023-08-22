@@ -9,12 +9,16 @@ import './ShopSection.css'
 const ShopSection = ({setitemurl}) => {
 
 
-    const {products} = useProductContext()
+    const {products, Loading} = useProductContext()
     const [filteredproduct, setfilteredproduct] = useState()
 
     useEffect(() => {
         setfilteredproduct(products)
     }, [products])
+
+    if(Loading){
+        return <h1>Loading...</h1>
+    }
 
     return(
         <div className='ShopSection'>

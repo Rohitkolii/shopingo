@@ -31,7 +31,8 @@
     color: white;
     font-size: 18px;
     font-weight: 500;
-    background-color: rgb(0, 170, 255);
+    /* background-color: rgb(0, 170, 255); */
+    background-color: #614BC3;
     border-radius: 20px;
     box-shadow: 1px 1px 5px rgb(68, 68, 68);
     margin: 25px auto;
@@ -56,13 +57,13 @@
 }
 
 .checkbox a{
-    color: #150BD4;
+    color: #614BC3;
     text-decoration: none;
 }
 
 .Registration-para a{
     text-decoration: none;
-    color: #150BD4;
+    color: #614BC3;
 }
 
 .google-login{

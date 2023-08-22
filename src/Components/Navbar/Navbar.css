@@ -4,9 +4,10 @@
     justify-content: space-between;
     padding: 0px 0px;
     align-items: center;
-    height: 4.5rem;
-    background-color: rgb(222, 242, 252);
+    height: 5.3rem;
+    /* background-color: rgb(222, 242, 252); */
     padding: 0px 50px;
+    /* box-shadow: 0px 1px 5px rgba(227, 227, 227, 0.5); */
 }
 
 .nav-logo h1{
@@ -16,7 +17,7 @@
 }
 
 .nav-logo span{
-    color: #54bbeb;
+    color: #614BC3;
 }
 
 #list{

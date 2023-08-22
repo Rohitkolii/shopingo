@@ -3,7 +3,8 @@
     height: 100%;
 }
 .FeaturedPost-container{
-    background-color: rgb(222, 242, 252);
+    /* background-color: rgb(222, 242, 252); */
+    background-color: rgb(219, 219, 219);
     padding: 30px 0px;
 }
 .inner-FeaturedPost{
@@ -21,7 +22,7 @@
 }
 
 .Featuredpost-price p:nth-child(1){
-    color: rgb(70, 192, 253);
+    color: #614BC3;
 }
 
 .FeaturedPost h2{
@@ -59,7 +60,7 @@
 }
 
 .Featuredpost-price a:hover{
-    background-color: rgb(76, 183, 236);
+    background-color: #614bc3c3;
 }
 
 .FeaturedPost-img{

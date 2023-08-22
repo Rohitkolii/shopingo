@@ -1,3 +1,6 @@
+
+
+
 .Cart-container{
     margin: 20px 0;
 }
@@ -49,12 +52,13 @@
 }
 
 .remove-itemi{
-    color: #2AB0EE;
+    color: #614BC3;
     font-size: 22px;
+    cursor: pointer;
 }
 
 .remove-itemi:hover{
-    color: #6bb7dd;
+    color: #614bc3dc;
 }
 
 .cart-area{
@@ -193,3 +197,27 @@
         display: none;
     }
 }
+
+
+
+.empty-con{
+    text-align: center; 
+    margin: 40px;
+    color: #614BC3;
+}
+
+.empty-con h1{
+    margin: 20px;
+}
+
+.empty-con img{
+    width: 220px;
+    /* position: relative; */
+    animation: img 5s infinite;
+}
+
+@keyframes img {
+    0% {transform: scale(100%);}
+    50% {transform: scale(120%);}
+    100% {transform: scale(100%);}
+  }

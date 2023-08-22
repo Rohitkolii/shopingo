@@ -5,7 +5,7 @@
     /* width: 20rem; */
     /* text-align: center; */
     padding: 20px 0;
-    transition: 1s;
+    transition: 5s;
 }
 
 .inner-ItemCategories h1{
@@ -15,9 +15,11 @@
     font-weight: 500;
     display: flex;
     align-items: center;
+    text-transform: capitalize;
 }
 .inner-ItemCategories button{
     color: #252525;
+    text-transform: capitalize;
     background-color: transparent;
     border: transparent;
 }

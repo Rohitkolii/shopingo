@@ -14,14 +14,15 @@ const Header = () => {
             <Navbar />
             <div className='inner-header'>
             <div className='header-title'>
-                <p>Diwali Sale is On</p>
-                <h1>Discover Men's</h1>
-                <h1>Latest Fashion</h1>
+                <p>Black Friday Sale is on</p>
+                <h1>Latest Gadgets</h1>
+                <p className='sale-h'>Sale</p>
+                <h1>Latest Technology</h1>
                 <Button Links={Links} />
             </div>
 
             <div className='header-img'>
-                <img src="./images/headerimg.png" alt='headerimg' />
+                <img src="./images/headphone.png" alt='headerimg' />
             </div>
             </div>
         </div>

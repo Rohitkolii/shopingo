@@ -1,22 +1,22 @@
 import './Items.css'
 import {AiFillLinkedin, AiFillInstagram, AiOutlineTwitter, AiFillFacebook, AiOutlinePlus, AiOutlineMinus, AiFillStar } from 'react-icons/ai'
 import { BsCheckLg} from 'react-icons/bs'
-
 import { useParams } from 'react-router-dom'
 import { useProductContext } from '../../Context/Context'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import ItemImages from './ItemImages'
-import { useState } from 'react'
-import { createContext } from 'react'
-// import { DataProvider } from '../../Context/Context'
-// import { useContext } from 'react'
+import { useCartContext } from '../../Context/CartContext'
+
+  import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const API = 'https://api.pujakaitem.com/api/products'
 
 const Items = () => {
 
     const {getSingleProduct, SingleProduct, isSingleLoading} = useProductContext();
-    
+    const { AddToCartHandler, SetCartCount , itemcount } = useCartContext();
+
     const { id } = useParams()
 
     const {
@@ -30,38 +30,12 @@ const Items = () => {
     stock
     } = SingleProduct || {};
     
-    const AddtoCart = async () => {
-        const CartData = {
-            cartimage: image[0].url,
-            cartname: name,
-            quantity: productcount,
-            color: color
-        }
-        console.log(CartData)
-
-        // Context 
-
-        
-
-        // const res = await fetch(
-        //     "https://shopingo-a073c-default-rtdb.firebaseio.com/Shopingo.json",
-        //     {
-        //         method:"POST",
-        //         headers: {
-        //             "Content-Type": "application/json",
-        //         },
-        //         body: JSON.stringify(CartData)
-        //     }
-        // )
-
-    }
-    
     useEffect( () => {
         getSingleProduct(`${API}?id=${id}`);
     }, []);
 
     const [color, setcolor] = useState(colors && colors[0])
-    const [productcount, setproductcount] = useState(1)
+    // const [productcount, setproductcount] = useState(1)
     
     return(
         <div className='Item'>
@@ -84,7 +58,7 @@ const Items = () => {
                             <div className="heading-ItemDetailCt">
                                 <p className='cate'>{category}</p>
                                 <h1>{name}</h1>
-                                <h1 className='itemp'>&#8377; {price}</h1>
+                                <h1 className='itemp'>&#8377; {Math.floor( price / 74)}</h1>
                                 <p><AiFillStar className='i' /> <AiFillStar className='i' /> <AiFillStar className='i' /> <AiFillStar className='i' /> <AiFillStar className='i' /></p>
                                 <p className='desci'>{description}</p>
                                 <p className='stock'>{stock} Products Available Now</p>
@@ -97,7 +71,7 @@ const Items = () => {
                                     colors && colors.map((clr, index) => {
                                         return(
                                             <button
-                                                style={{backgroundColor:clr}}
+                                                style={{backgroundColor:clr, cursor: 'pointer'}}
                                                 className={color === clr ? 'colorbtn Active' : 'colorbtn'}
                                                 key={index}
                                                 onClick={() => setcolor(clr)}
@@ -113,13 +87,13 @@ const Items = () => {
                             <div className="Addcart-ItemDetailsCt">
                                 <div>
                                     <div>
-                                        <button><AiOutlineMinus className='i' onClick={() => setproductcount(productcount - 1)}/></button>
-                                        <p>{productcount}</p>
-                                        <button><AiOutlinePlus className='i' onClick={() => setproductcount(productcount + 1)}/></button>
+                                        <button><AiOutlineMinus className='i' onClick={() => SetCartCount('DECREMENT')}/></button>
+                                        <p>{itemcount}</p>
+                                        <button><AiOutlinePlus className='i' onClick={() => SetCartCount('INCREMENT')}/></button>
                                     </div>
 
                                     <div>
-                                        <button onClick={AddtoCart}>ADD TO CART</button>
+                                        <button onClick={() => AddToCartHandler(name, price, color, image, itemcount, ed)}>ADD TO CART</button>
                                     </div>
                                 </div>
 
@@ -136,6 +110,10 @@ const Items = () => {
                     </div>
                 </div>
             }
+
+
+            <ToastContainer />
+
         </div>
     )
 }

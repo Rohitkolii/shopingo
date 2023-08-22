@@ -1,7 +1,8 @@
 .ShopHeader{
     background-color: rgb(222, 242, 252);
+    background-color: #bfb0ff58;
     /* width: 100%; */
-    height: 20rem;
+    height: 16rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -10,7 +11,10 @@
     color: black;
 }
 
-
+.inner-ShopHeader{
+    width: 90%;
+    margin: auto;
+}
 
 .inner-ShopHeader a{
     color: black;

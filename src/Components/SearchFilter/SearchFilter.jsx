@@ -11,8 +11,8 @@ const SearchFilter = ({setfilteredproduct}) => {
         const nnd = products.filter(({name, company, category}) => {
             return name === inputvalue || company === inputvalue || category === inputvalue
         })
-
-        setfilteredproduct(nnd)
+        
+            setfilteredproduct(nnd)
     }
 
 
