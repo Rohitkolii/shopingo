@@ -15,6 +15,7 @@ const Navbar = () => {
         Link: '/login',
         LinkText: 'Login'
     }
+    
     return(
         <div className="Navbar">
             <div className="nav-logo">

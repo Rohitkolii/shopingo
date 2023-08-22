@@ -32,9 +32,10 @@ const Items = () => {
     
     useEffect( () => {
         getSingleProduct(`${API}?id=${id}`);
+        // eslint-disable-next-line
     }, []);
 
-    const [color, setcolor] = useState(colors && colors[0])
+    const [color, setcolor] = useState(colors && colors[0]);
     // const [productcount, setproductcount] = useState(1)
     
     return(
@@ -58,7 +59,7 @@ const Items = () => {
                             <div className="heading-ItemDetailCt">
                                 <p className='cate'>{category}</p>
                                 <h1>{name}</h1>
-                                <h1 className='itemp'>&#8377; {Math.floor( price / 74)}</h1>
+                                <h1 className='itemp'>&#8377; { price / 10}</h1>
                                 <p><AiFillStar className='i' /> <AiFillStar className='i' /> <AiFillStar className='i' /> <AiFillStar className='i' /> <AiFillStar className='i' /></p>
                                 <p className='desci'>{description}</p>
                                 <p className='stock'>{stock} Products Available Now</p>
@@ -76,7 +77,7 @@ const Items = () => {
                                                 key={index}
                                                 onClick={() => setcolor(clr)}
                                                 >
-                                                {color === clr ? <BsCheckLg className='color-check' /> : ''}
+                                                {color === clr ? <BsCheckLg className='color-check' /> : null}
                                             </button>
                                         )
                                     })

@@ -1,9 +1,11 @@
+// 'use client'
 import './CartContainer.css'
 import {ImBin} from 'react-icons/im'
 // import {GrFormAdd} from 'react-icons/gr'
 // import {AiOutlineMinus} from 'react-icons/ai'
 import { useCartContext } from '../Context/CartContext'
 import Button from '../Button/Button'
+import { useEffect, useState } from 'react'
 
 const CartContainer = () => {
 
@@ -13,15 +15,29 @@ const CartContainer = () => {
     }
 
     const {cart, removeCartItem} = useCartContext()
-    console.log(cart);
 
-    // const[subtotal, setsubtotal] = useState()
+    const[subtotal, setsubtotal] = useState(0)
+
+    const Total = () => {
+        let TotalAmount=0;
+        cart.map((elm) => {
+            TotalAmount += elm.price * elm.itemcount;
+        })
+        setsubtotal(TotalAmount);
+    }
+
+    useEffect(()=> {
+        Total()
+    }, [cart])
+
 
     const colorName = (color) => {
         if(color === '#22D3EF') return 'Cyan'
         else if(color === '#ff0000') return 'Red'
-        else if(color === '##CDD0D0') return 'Gray'
+        else if(color === '#CDD0D0') return 'Gray'
         else if(color === '#000') return 'Black'
+        else if(color === '#000000') return 'Black'
+        else return 'No color'
     }
 
     return(
@@ -47,6 +63,7 @@ const CartContainer = () => {
                     </div>
                     {
                         cart && cart.map(({name, price, color, image, itemcount, ed}, index) => {
+
                             return(
                             <div key={index} className="cartitem-container">
                                 <div className='cartitem-container_one'>
@@ -92,7 +109,7 @@ const CartContainer = () => {
                         <div className='order_pricing'>
                             <div className='subtotal'>
                                 <p>Sub Total</p>
-                                <p>&#8377; {'subtotal'}</p>
+                                <p>&#8377; {subtotal}</p>
                             </div>
 
                             <div className='shipping_charge'>
@@ -103,7 +120,7 @@ const CartContainer = () => {
 
                         <div className='order_Total'>
                             <p>Grand Total</p>
-                            <p>&#8377; {'subtotal' + 50}</p>
+                            <p>&#8377; {subtotal + 50}</p>
                         </div>
 
                         <div className='checkoutbtn_container'>

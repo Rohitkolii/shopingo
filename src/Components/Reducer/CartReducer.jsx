@@ -4,18 +4,41 @@ const cartReducer = (State, action) => {
 
         const {name, price, color, image,itemcount, ed} = action.payload;
 
-        const cartclone = {
-            name,
-            price,
-            color,
-            image,
-            itemcount,
-            ed
+        let existing = State.cart.find((elm) => elm.ed === ed+color)
+
+        if(existing) {
+            let updatedproduct = State.cart.map((elm) => {
+                if(elm.ed === ed+color){
+                    let newq = elm.itemcount + itemcount;
+                    return{
+                        ...elm,
+                        itemcount: newq,
+                    } 
+                } else{
+                    return elm;
+                }
+            })
+
+            return{
+                ...State,
+                cart: updatedproduct,
+            }
+
+        } else{
+            const cartclone = {
+                name,
+                price,
+                color,
+                image,
+                itemcount,
+                ed : ed + color,
+            }
+            return{
+                ...State,
+                cart: [...State.cart, cartclone]
+            }
         }
-        return{
-            ...State,
-            cart: [...State.cart, cartclone]
-        }
+
     }
 
     if(action.type === "INCREMENT"){

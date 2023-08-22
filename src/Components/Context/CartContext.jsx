@@ -1,7 +1,7 @@
 import { createContext, useReducer, useContext } from "react";
 import reducer from '../Reducer/CartReducer'
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const CartContext = createContext()

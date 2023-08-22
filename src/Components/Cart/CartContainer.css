@@ -98,7 +98,8 @@
 }
 
 .order-area{
-    background-color: #8cd4f5b9;
+    /* background-color: rgb(222, 242, 252); */
+    background-color: #bfb0ff58;
     width: 25%;
     height: 17rem;
     border-radius: 10px;
@@ -136,7 +137,8 @@
 }
 
 .checkoutbtn_container button{
-    background-color: #2AB0EE;
+    /* background-color: #2AB0EE; */
+    background-color: #614BC3;
     /* padding: 8px 15px; */
     width: 80%;
     height: 35px;
@@ -149,7 +151,7 @@
 }
 
 .checkoutbtn_container button:hover{
-    background-color: #0da4eb;
+    background-color: #614bc3e7;
 }
 
 

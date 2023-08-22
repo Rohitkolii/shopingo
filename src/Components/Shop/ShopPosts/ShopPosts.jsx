@@ -24,7 +24,13 @@ const ShopPosts = ({filteredproduct}) => {
                                             {/* <h5>{category}</h5> */}
                                             <h5>{name}</h5>
                                             {/* <p>{description}</p> */}
-                                            <p className='desc-price'> &#8377; {Math.floor( price / 74)}</p>
+                                            <p className='desc-price'> {
+                                                Intl.NumberFormat("en-IN", {
+                                                    style: "currency",
+                                                    currency: "INR",
+                                                    maximumFractionDigits: 2,
+                                                }).format(price/100)
+                                            }</p>
                                         </div>
                                     </div>
                                 </Link>
