@@ -8,7 +8,7 @@
 .ShopSection-Sidebar{
     padding: 0 15px;
     width: 30%;
-    height: 100vh;
+    height: auto;
     border-radius: 6px;
     /* background-color: navajowhite; */
     /* box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.144); */
@@ -38,27 +38,27 @@
     .ShopSection-PostSection{
         width: 60%;
     }
-
+    
     .ShopSection-Sidebar{
         width: 40%;
     }
 
 }
-
-@media only screen and (max-width: 610px){
+@media only screen and (max-width: 830px){
     .inner-ShopSection{
         flex-direction: column;
     }
 
-    .ShopSection-Sidebar{
-        height: auto;
-        padding: 20px;
-    }
-
     .ShopSection-PostSection{
+        /* background-color: red; */
+        width: 90%;
         margin: auto;
-        width: 95%;
     }
+}
+
+@media only screen and (max-width: 610px){
+
+
 
     .ShopSection-Sidebar{
         display: flex;
