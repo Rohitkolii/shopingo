@@ -26,7 +26,7 @@ const LoginItems = (props) => {
             })
             localStorage.setItem('shopingotoken', res.data.token)
             
-            toast.success('🦄 Wow so easy!', {
+            toast.success('Login Successfull!', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -40,7 +40,7 @@ const LoginItems = (props) => {
             
 
             } catch (error) {
-                toast.error('🦄 Wow so easy!', {
+                toast.error('Something went wrong!', {
                     position: "top-center",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -52,7 +52,7 @@ const LoginItems = (props) => {
                     });
             }
         } else{
-            toast.info('🦄 Please fill Checkbox!', {
+            toast.info('Please fill Checkbox!', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,

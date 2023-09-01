@@ -6,6 +6,7 @@ import {ImBin} from 'react-icons/im'
 import { useCartContext } from '../Context/CartContext'
 import Button from '../Button/Button'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const CartContainer = () => {
 
@@ -42,6 +43,12 @@ const CartContainer = () => {
     }
 
     return(
+        <>
+{
+
+    localStorage.getItem('shopingotoken') ?
+    <>
+        {
         cart.length === 0 ? 
         <div className='empty-con' >
             <img src="Images/cart2.png" alt="" />
@@ -132,6 +139,16 @@ const CartContainer = () => {
                 </div>
             </div>
         </div>
+        }
+        </>
+        :
+        <div className='showiflogout'>
+            <img src="images/loginimg.png" alt="" />
+            <h1>Please login First</h1>
+            <Link to='/login'>Login</Link>
+        </div>
+        }
+        </>
     )
 }
 
