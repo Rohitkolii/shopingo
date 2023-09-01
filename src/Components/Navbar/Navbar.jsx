@@ -2,18 +2,51 @@ import { useState } from 'react'
 import './Navbar.css'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import Button from '../Button/Button'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { useCartContext } from '../Context/CartContext'
-const { Link } = require("react-router-dom")
+const { Link, useNavigate } = require("react-router-dom")
+
 
 const Navbar = () => {
 
     const {cart} = useCartContext()
-
     const [hamburger, sethamburger] = useState(false)
 
+    const navigate = useNavigate()
     const Links = {
         Link: '/login',
         LinkText: 'Login'
+    }
+
+    const Links2 = {
+        Link: '/login',
+        LinkText: 'Logout'
+    }
+
+    const logoutHandler = ()=> {
+        localStorage.removeItem('shopingotoken')
+        navigate('/login')
+        toast.success('Logout Successfull', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+    }
+
+    const showlogin = () => {
+        if(localStorage.getItem('shopingotoken')){
+            return <button href='/login' style={{backgroundColor: '#614BC3', padding: '8px 15px', cursor: 'pointer', border: 'transparent', textTransform: 'uppercase'}} onClick={()=> logoutHandler()}>Logout</button>
+        } else{
+            return <Button Links={Links}/>
+        }
     }
     
     return(
@@ -30,7 +63,9 @@ const Navbar = () => {
                     <li><Link to='/shop'>Shop</Link></li>
                     <li><Link to='/blogs'>Blogs</Link></li>
                     <li><Link to='/more'>More</Link></li>
-                    <Button Links={Links}/>
+                    {
+                    showlogin()
+                    }
                     <li className='carti'><Link to='/cart'><AiOutlineShoppingCart className="cart-btn" /><span>{cart.length !== 0 ? cart.length : '0'}</span></Link></li>
                 </ul>
             </div>

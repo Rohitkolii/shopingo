@@ -1,9 +1,69 @@
 import { useState } from 'react'
 import './LoginItems.css'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const LoginItems = (props) => {
+
+    const navigate = useNavigate()
 
     const [email, setemail] = useState()
     const [password, setpassword] = useState()
+    const [check, setcheck] = useState(false)
+
+    const LoginHandler = async (e) => {
+        e.preventDefault()
+        if(check){
+
+            try {
+                const res = await axios.post('https://reqres.in/api/login',{
+                email: email,
+                password: password
+            })
+            localStorage.setItem('shopingotoken', res.data.token)
+            
+            toast.success('🦄 Wow so easy!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+            navigate('/shop')
+            
+
+            } catch (error) {
+                toast.error('🦄 Wow so easy!', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+            }
+        } else{
+            toast.info('🦄 Please fill Checkbox!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }
+    }
 
 
     return(
@@ -14,7 +74,7 @@ const LoginItems = (props) => {
                  
             </section>
 
-            <form>
+            <form onSubmit={LoginHandler}>
                 <label>
                     @Username
                     <input onChange={(e) => setemail(e.target.value)} type="text" placeholder='@yourusername'/>
@@ -26,7 +86,7 @@ const LoginItems = (props) => {
                 </label>
 
                 <div className='checkbox' >
-                    <p><input type="checkbox"/> Remember me</p>
+                    <p><input id='check' onChange={()=> setcheck(!check)} type="checkbox"/> <label htmlFor="check"> Remember me</label></p>
                     <a href="/">Forget Password?</a>
                 </div>
                     <button>Login</button>

@@ -10,7 +10,7 @@ const ErrorPage = () => {
             <div className='inner-ErrorrPage'>
                 <h1>OU-OH</h1>
                 <p>The Page You Are Looking For Does not Exist</p>
-                <img src='./images/404.png'></img>
+                <img src='./images/404.png' alt='error img'></img>
             </div>
             <Footer />
         </div>

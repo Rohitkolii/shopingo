@@ -5,7 +5,7 @@ const ColorSelector = ({setfilteredproduct}) => {
     
     const {products} = useProductContext()
 
-    const {colors} = products || {};
+    // const {colors} = products || {};
     
     const FilterbyColor = (clr) => {
         const flclr = products.filter(({colors}) => {

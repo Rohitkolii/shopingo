@@ -21,13 +21,14 @@ const CartContainer = () => {
     const Total = () => {
         let TotalAmount=0;
         cart.map((elm) => {
-            TotalAmount += elm.price * elm.itemcount;
+            return TotalAmount += elm.price * elm.itemcount;
         })
         setsubtotal(TotalAmount);
     }
 
     useEffect(()=> {
         Total()
+        // eslint-disable-next-line
     }, [cart])
 
 
