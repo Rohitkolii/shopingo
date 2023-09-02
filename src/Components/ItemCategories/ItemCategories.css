@@ -8,11 +8,11 @@
     transition: 5s;
 }
 
-.inner-ItemCategories h1{
+.inner-ItemCategories p{
     color: #252525;
     cursor: pointer;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 18px;
+    /* font-weight: 500; */
     display: flex;
     align-items: center;
     text-transform: capitalize;

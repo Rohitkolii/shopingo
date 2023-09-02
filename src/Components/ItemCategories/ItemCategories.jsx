@@ -24,7 +24,7 @@ const ItemCategories = ({setfilteredproduct }) => {
         <div className="ItemCategories">
             <div className="inner-ItemCategories">
                 <div className="ItemCategories-h1">
-                    <button onClick={() => {Setvisibility(!visibility)}}><h1> {!visibility ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />} Item Categories</h1></button>
+                    <button onClick={() => {Setvisibility(!visibility)}}><p> {!visibility ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />} Item Categories</p></button>
                 </div>
                 {
                     visibility ?

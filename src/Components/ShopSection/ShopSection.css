@@ -35,35 +35,19 @@
 }
 
 @media only screen and (max-width: 830px){
-    .ShopSection-PostSection{
-        width: 60%;
-    }
     
     .ShopSection-Sidebar{
-        width: 40%;
+        width: 95%;
+        margin: auto;
     }
-
-}
-@media only screen and (max-width: 830px){
     .inner-ShopSection{
         flex-direction: column;
+        gap: 30px;
     }
 
     .ShopSection-PostSection{
-        /* background-color: red; */
         width: 90%;
         margin: auto;
     }
 }
 
-@media only screen and (max-width: 610px){
-
-
-
-    .ShopSection-Sidebar{
-        display: flex;
-        width: 90%;
-        margin: auto;
-    }
-
-}

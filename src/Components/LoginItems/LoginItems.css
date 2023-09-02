@@ -12,12 +12,29 @@
 .LoginItems form label{
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.showpass svg{
+    font-size: 18px;
+}
+
+.showpass{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid gray;
 }
 
 .LoginItems input, .LoginItems:focus{
     height: 40px;
     /* width: 100%; */
-    border-radius: 12px;
+    border-radius: 10px;
     border: transparent;
     box-shadow: 1px 1px 5px gray;
     outline: none;

@@ -3,6 +3,8 @@ import './LoginItems.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
+import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai'
+
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -14,6 +16,7 @@ const LoginItems = (props) => {
     const [email, setemail] = useState()
     const [password, setpassword] = useState()
     const [check, setcheck] = useState(false)
+    const [showpass, setShowpass] = useState(false)
 
     const LoginHandler = async (e) => {
         e.preventDefault()
@@ -66,6 +69,7 @@ const LoginItems = (props) => {
     }
 
 
+
     return(
         <div className="LoginItems">
                 <h1>Login</h1>
@@ -77,12 +81,18 @@ const LoginItems = (props) => {
             <form onSubmit={LoginHandler}>
                 <label>
                     @Username
-                    <input onChange={(e) => setemail(e.target.value)} type="text" placeholder='@yourusername'/>
+                    <input onChange={(e) => setemail(e.target.value)} type="text" name='loginusername' placeholder='@yourusername'/>
                 </label>
 
                 <label>
                     Password
-                    <input onChange={(e) => setpassword(e.target.value)} type="password" placeholder='min. 8 characters'/>
+                    <input onChange={(e) => setpassword(e.target.value)} type={showpass ? 'text' : 'password'} name='loginpassword' placeholder='min. 8 characters'/>
+                    {
+                        showpass ? 
+                        <span onClick={()=> setShowpass(!showpass)} className='showpass'><AiOutlineEyeInvisible /></span>
+                        :
+                        <span onClick={()=> setShowpass(!showpass)} className='showpass'><AiOutlineEye /></span>
+                    }
                 </label>
 
                 <div className='checkbox' >

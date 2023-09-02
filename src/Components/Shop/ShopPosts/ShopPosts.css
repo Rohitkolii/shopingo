@@ -5,21 +5,28 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* .ShopPost-Card:nth-child(1){
-    grid-row: 1/ span 1;
+.ShopPostlist{
+    /* width: 50%; */
+    display: grid;
+    gap: 30px;
+    margin: 30px 0;
 }
-.ShopPost-Card:nth-child(2){
-    grid-row: 1/ span 1;
+
+.ShopPostlist .inner-ShopPostCard{
+    display: flex;
+    gap: 50px;
+    align-items: center;
 }
-.ShopPost-Card:nth-child(3){
-    grid-row: 1/ span 1;
+
+
+.ShopPostlist .ShopPost-img{
+    width: 200px;
+    height: 150px;
 }
-.ShopPost-Card:nth-child(4){
-    grid-row: 2/ span 1;
+
+.ShopPostlist .ShopPost-img img{
+    min-width: 100%;
 }
-.ShopPost-Card:nth-child(5){
-    grid-row: 2/ span 1;
-} */
 
 .ShopPost-Card{
     /* width: 13rem; */
@@ -98,6 +105,31 @@
     transition: .5s;
 }
 
+.arrange-shop{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.grid-shop{
+    display: flex;
+    gap: 20px;
+}
+
+.grid-shop span svg{
+    font-size: 30px;
+    padding: 5px;
+    /* color: #252525; */
+    cursor: pointer;
+    transition: .1s;
+}
+
+.activegride{
+    background-color: #252525;
+    color: white;
+    transition: .1s;
+}
+
 @media only screen and (max-width: 1000px){
     .ShopPost{
         grid-template-columns: repeat(2, 1fr);
@@ -111,6 +143,12 @@
     grid-template-columns: repeat(3, 1fr);
    }
 
+   .ShopPostlist .inner-ShopPostCard{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
 }
 
 @media only screen and (max-width: 610px){
@@ -122,6 +160,22 @@
     .ShopPost-img{
         height: 12rem;
     }
+
+    .ShopPostlist .ShopPost-img{
+        width: 200px;
+        height: 100px;
+    }
+    
+    .ShopPostlist .ShopPost-img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .ShopPostlist .inner-ShopPostCard{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 460px){
@@ -129,12 +183,58 @@
     .ShopPost-img{
         height: 10rem;
     }
+
+    .arrange-shop{
+        font-size: 15px;
+    }
+
+    .grid-shop span svg{
+        font-size: 25px;
+    }
+
+    .ShopPostlist .in
+
+    .ShopPostlist .ShopPost-img{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .ShopPostlist .ShopPost-img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .ShopPostlist p{
+        font-size: 10px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 400px){
+    .arrange-shop div:nth-child(2){
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 375px){
     
     .ShopPost{
         gap: 10px;
+    }
+
+    .ShopPostlist .ShopPost-img{
+        width: 100px;
+        height: 50px;
+    }
+    
+    /* .ShopPostlist .ShopPost-img img{
+        width: 100%;
+        height: 100%;
+    } */
+
+    .ShopPostlist p{
+        font-size: 8px;
     }
     
 }

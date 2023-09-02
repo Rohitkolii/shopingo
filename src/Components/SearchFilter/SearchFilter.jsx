@@ -19,7 +19,7 @@ const SearchFilter = ({setfilteredproduct}) => {
     return(
         <div className="search-container">
             <div className="search-input">
-                <input type="text" onChange={(v)=> setinputvalue(v.target.value)}/>
+                <input placeholder='Search' type="text" onChange={(v)=> setinputvalue(v.target.value)}/>
                 <button onClick={() => Filterbysearch() } className='search-button'><AiOutlineSearch /></button>
             </div>
         </div>

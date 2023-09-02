@@ -1,6 +1,12 @@
 import './SignUp.css'
 
 const SignUp = (props) => {
+
+    const signupHandler = (e) => {
+        e.preventDefault()
+        alert('Sign Up Functinality is not Active!')
+    }
+
     return(
         <div className='SignUp'>
                                 <h1>SignUp</h1>
@@ -9,7 +15,7 @@ const SignUp = (props) => {
                  
             </section>
 
-            <form action="POST">
+            <form onSubmit={signupHandler}>
                 <label>
                     @Username
                     <input type="text" placeholder='yourmail@gmail.com or contact'/>

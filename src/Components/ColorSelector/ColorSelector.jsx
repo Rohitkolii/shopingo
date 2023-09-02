@@ -18,7 +18,7 @@ const ColorSelector = ({setfilteredproduct}) => {
         <div className='ColorSelector'>
             <div className='inner-ColorSelector'>
                 <div className='ColorSelector-h1'>
-                    <button><h1>Color</h1></button>
+                    <button><p>Color</p></button>
                 </div>
                 <div className='filter-ItemDetailsCt'>
                     <button onClick={() => {FilterbyColor('#ff0000')}} className='Active colorbtn'  style={{backgroundColor: '#ff0000'}}></button>

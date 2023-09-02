@@ -213,3 +213,8 @@
         margin: 0px 3px;
     }
 }
+        @media only screen and (max-width: 320px){
+            .Footer1 input{
+                width: auto;
+            }
+        }

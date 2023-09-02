@@ -1,14 +1,37 @@
 import './ShopPosts.css'
 import { Link } from 'react-router-dom';
 
+import {BsGridFill} from 'react-icons/bs'
+import {FaList} from 'react-icons/fa'
+import { useState } from 'react';
+
 const ShopPosts = ({filteredproduct}) => {
+
+    const [grid, setgrid] = useState(true)
 
     return(
 
         <>
-        <div className="ShopPost">
+
+        <div className='arrange-shop'>
+            <div className='grid-shop'>
+                <span onClick={()=> setgrid(!grid)}><BsGridFill className={grid ? 'activegride' : ''} /></span>
+                <span onClick={()=> setgrid(!grid)}><FaList className={!grid ? 'activegride' : ''} /></span>
+            </div>
+            <div>
+                <p>{filteredproduct ? filteredproduct.length : ''} Products</p>
+            </div>
+            <div>
+                <select name="pricerange" id="">
+                    <option value="price">Sort by price</option>
+                    <option value="category">Sort by Category</option>
+                </select>
+            </div>
+        </div>
+
+        <div className={grid ? "ShopPost" : 'ShopPostlist'}>
             {
-                filteredproduct && filteredproduct.map(({id, image, name, price})=> {
+                filteredproduct && filteredproduct.map(({id, image, name, price, description})=> {
                     return(
                         <div key={id} className={`ShopPost-Card`}>
                                 <Link to={`/shop/${id}`}>
@@ -23,7 +46,12 @@ const ShopPosts = ({filteredproduct}) => {
                                         <div className='ShopPost-descriptopn'>
                                             {/* <h5>{category}</h5> */}
                                             <h5>{name}</h5>
-                                            {/* <p>{description}</p> */}
+                                            {
+                                                !grid ?
+                                                <p>{description.slice(0,100)}</p>
+                                                :
+                                                ''
+                                            }
                                             <p className='desc-price'> {
                                                 Intl.NumberFormat("en-IN", {
                                                     style: "currency",

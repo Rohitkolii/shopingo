@@ -2,9 +2,11 @@
     background-color: transparent;
     border: transparent;
     color: #252525;
+    width: 18px;
+    height: 18px;
 }
 
-.inner-ColorSelector h1{
-    font-size: 22px;
-    font-weight: 500;
+.inner-ColorSelector p{
+    font-size: 18px;
+    /* font-weight: 500; */
 }
