@@ -3,7 +3,7 @@
     margin: 20px auto;
 }
 .ItemsContainer{
-    width: 50%;
+    /* width: 50%; */
     margin: auto;
     display: flex;
     justify-content: center;

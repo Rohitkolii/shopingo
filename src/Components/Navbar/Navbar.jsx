@@ -3,7 +3,7 @@ import './Navbar.css'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import Button from '../Button/Button'
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { useCartContext } from '../Context/CartContext'
@@ -19,11 +19,6 @@ const Navbar = () => {
     const Links = {
         Link: '/login',
         LinkText: 'Login'
-    }
-
-    const Links2 = {
-        Link: '/login',
-        LinkText: 'Logout'
     }
 
     const logoutHandler = ()=> {

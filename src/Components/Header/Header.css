@@ -2,12 +2,7 @@
 
 .headerBanner{
     width: 100%;
-    /* height: 100vh; */
-    /* padding: 0px 50px; */
-    /* background-color: rgb(222, 242, 252); */
-    /* overflow-x: hidden; */
     background-color: rgb(247, 247, 247);
-    /* padding: 50px 0; */
 }
 .inner-header{
     display: flex;
@@ -26,7 +21,7 @@
 
 .header-img{
     /* background-color: rgb(255, 255, 255); */
-    width: 25rem;
+    width: 23rem;
     /* height: 28rem; */
     text-align: center;
     border-radius: 100%;
