@@ -1,0 +1,28 @@
+.CountDownTimer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CountDownTimer p{
+    background-color: white;
+    color: black;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10px 15px; */
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 920px){
+    .CountDownTimer p{
+        margin: 0px auto;
+    }
+
+    .CountDownTimer{
+        justify-content: center;
+    }
+}

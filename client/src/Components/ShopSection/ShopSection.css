@@ -1,0 +1,53 @@
+.ShopSection{
+    height: 20rem;
+    height: auto;
+    /* height: 20rem; */
+    margin: 20px 0;
+}
+
+.ShopSection-Sidebar{
+    padding: 0 15px;
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+    /* background-color: navajowhite; */
+    /* box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.144); */
+}
+
+.ShopSection-PostSection{
+    /* background-color: red; */
+    width: 70%;
+}
+
+.inner-ShopSection{
+    /* background-color: rebeccapurple; */
+    width: 80%;
+    margin: auto;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+@media only screen and (max-width: 1150px){
+    .inner-ShopSection{
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 830px){
+    
+    .ShopSection-Sidebar{
+        width: 95%;
+        margin: auto;
+    }
+    .inner-ShopSection{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .ShopSection-PostSection{
+        width: 90%;
+        margin: auto;
+    }
+}
+

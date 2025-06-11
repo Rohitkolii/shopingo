@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+.headerBanner{
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+.inner-header{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 150px; */
+    width: 80%;
+    margin: auto;
+    max-width: 1400px;
+    position: relative;
+    top: 2rem;
+    align-items: center;
+}
+
+.inner-header img{
+    width: 100%;
+    transform: rotate(-12deg);
+    filter: drop-shadow(1px 1px 5px rgba(60, 3, 146, 0.666));
+}
+
+.header-img{
+    /* background-color: rgb(255, 255, 255); */
+    width: 23rem;
+    /* height: 28rem; */
+    text-align: center;
+    border-radius: 100%;
+}
+
+.header-title{
+    position: relative;
+}
+
+.header-title h1{
+    font-size: 42px;
+    font-weight: 600;
+    /* color: rgb(58, 56, 56); */
+    color: black;
+    text-transform: uppercase;
+}
+
+.header-title p:nth-child(1){
+    font-size: 15px;
+    color: #614BC3;
+}
+
+.sale-h{
+    font-size: 90px;
+    position: absolute;
+    bottom: -25px;
+    right: 25%;
+    z-index: 5;
+    color: #614BC3;
+    font-weight: 600;
+    font-family: 'Allura', cursive;
+    transform: rotate(-13deg);
+}
+
+.inner-header a{
+    box-shadow: 1px 1px 5px rgb(194, 186, 186);
+    position: relative;
+    margin: 0 10px;
+    top: 25px;
+    text-decoration: none;
+    color: black;
+    transition: 1s;
+}
+.inner-header a:hover{
+    padding-right: 28px;
+}
+@media only screen and (max-width: 815px){
+    .inner-header{
+        padding: 0px 0px;
+    }
+
+    .header-title h1{
+        font-size: 30px;
+    }
+
+    .header-img{
+        width: 25rem;
+        height: 30rem;
+    }
+    .header-img img{
+        width: 17rem;
+    }
+
+    .headerBanner{
+        padding: 0px 35px;
+    }
+
+    @media only screen and (max-width:650px){
+        
+        .inner-header{
+            display: flex;
+            flex-direction: column-reverse;
+            top: 0px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+        .header-title{
+            /* margin-top: 20px; */
+        }
+        .header-img img{
+            width: 70%;
+            /* height: 100%; */
+        }
+        .header-img{
+            width: 13rem;
+            height: auto;
+        }
+
+        .headerBanner{
+            padding: 0px 0px;
+        
+        }
+
+        .inner-header a{
+            top: 45px;
+    }
+    
+}
+}

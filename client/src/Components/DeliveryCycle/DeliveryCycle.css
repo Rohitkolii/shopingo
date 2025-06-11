@@ -1,0 +1,126 @@
+.DeliveryCycle{
+    height: auto;
+    margin: 50px 0;
+    color: rgb(49, 47, 47);
+    /* background-color: aqua; */
+}
+.inner-DeliveryCycle{
+    display: flex;
+    /* justify-content: space-between; */
+    width: 80%;
+    max-width: 1400px;
+    margin: auto;
+    gap: 20px;
+    /* border-bottom: 1px solid rgb(197, 197, 197); */
+    padding: 30px 0;
+}
+
+.inner-DeliveryCycle p{
+    font-size: 15px;
+    color: rgb(78, 76, 76);
+    line-height: 1.4;
+    text-align: center;
+}
+
+.inner-DeliveryCycle img{
+    width: 50px;
+    /* margin-right: 8px; */
+    background-color: var(--fade);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.inner-DeliveryCycle span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc{
+    /* margin: 0px 5px; */
+    border: 3px solid var(--fade);
+    padding: 50px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    width: 100%;
+}
+.desc:hover{
+    border: 3px solid var(--main);
+    /* transform: scale(105%); */
+}
+
+@media only screen and (max-width: 1150px){
+    .inner-DeliveryCycle{
+        width: 95%;
+    }
+
+    
+.inner-DeliveryCycle span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+}
+@media only screen and (max-width: 1050px){
+    /* .desc span{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        flex-direction: column;
+    } */
+
+    .inner-DeliveryCycle p{
+        display: none;
+    }
+
+    .inner-DeliveryCycle h4{
+        text-align: center;
+        justify-content: center;
+    }
+} 
+@media only screen and (max-width: 815px) {
+    .inner-DeliveryCycle{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    
+    .desc{
+        transition: .5s;
+    }
+    
+    .inner-DeliveryCycle h4{
+        text-align: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+    
+    .inner-DeliveryCycle{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    /* justify-content: space-between; */
+    /* width: 80%; */
+    max-width: 1400px;
+    /* margin: auto; */
+    gap: 10px;
+    /* border-bottom: 1px solid rgb(197, 197, 197); */
+    padding: 10px 0;
+    text-align: center;
+    width: 90%;
+}
+}
+
+@media only screen and (max-width:500px){
+    .desc{
+    padding: 20px 5px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+}
+}
+

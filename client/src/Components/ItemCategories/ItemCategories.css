@@ -1,0 +1,33 @@
+.inner-ItemCategories{
+    display: flex;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    /* width: 20rem; */
+    /* text-align: center; */
+    padding: 20px 0;
+    transition: 5s;
+}
+
+.inner-ItemCategories p{
+    color: #252525;
+    cursor: pointer;
+    font-size: 18px;
+    /* font-weight: 500; */
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.inner-ItemCategories button{
+    color: #252525;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: transparent;
+}
+.inner-ItemCategories .ItemCategories-btn ul button{
+    /* display: flex; */
+    /* flex-direction: column; */
+    display: block;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}

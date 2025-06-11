@@ -1,0 +1,57 @@
+.DashboardPage{
+    width: 100%;
+}
+
+.dashContent{
+    background-color: var(--fade);
+    width: 98%;
+    margin: 20px auto;
+    border-radius: 12px;
+    padding: 20px;
+}
+.dashtop{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid var(--fade);
+    border-radius: 6px;
+}
+
+.dashtop .dashrow{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--fade);
+    padding: 10px 0;
+}
+
+.dashtop .dashrow .dashcol{
+    /* height: 50px; */
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Status button{
+    background-color: rgba(255, 255, 0, 0.633);
+    border-radius: 24px;
+    font-weight: 500;
+    padding: 10px 30px;
+    border: transparent;
+}
+
+.detail button{
+    background-color: var(--main);
+    border-radius: 24px;
+    color: white;
+    font-weight: 500;
+    padding: 10px 30px;
+    border: transparent;
+}
+
+.product img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}

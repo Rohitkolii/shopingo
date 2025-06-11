@@ -1,0 +1,189 @@
+.ShopPost{
+    display: grid;
+    padding: 20px 0;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ShopPostlist{
+    /* width: 50%; */
+    display: grid;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.ShopPostlist .Items{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+
+.ShopPostlist .Items img{
+    width: 200px;
+    height: 150px;
+}
+
+.ShopPostlist .ShopPost-img img{
+    /* min-width: 100%; */
+}
+
+
+/* .add-btn{
+    display: flex;
+    justify-content: right;
+} */
+
+.add-btn button:hover{
+    background-color: rgb(32, 31, 31);
+}
+
+.add-btn a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    /* border-radius: 6px; */
+    transition: .5s;
+}
+
+.arrange-shop{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.grid-shop{
+    display: flex;
+    gap: 20px;
+}
+
+.grid-shop span svg{
+    font-size: 30px;
+    padding: 5px;
+    /* color: #252525; */
+    cursor: pointer;
+    transition: .1s;
+}
+
+.activegride{
+    background-color: #252525;
+    color: white;
+    transition: .1s;
+}
+
+@media only screen and (max-width: 1000px){
+    .ShopPost{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+}
+
+@media only screen and (max-width: 830px){
+   .ShopPost{
+    grid-template-columns: repeat(3, 1fr);
+   }
+
+   .ShopPostlist .inner-ShopPostCard{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+}
+
+@media only screen and (max-width: 610px){
+
+    .ShopPost{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ShopPost-img{
+        height: 12rem;
+    }
+
+    .ShopPostlist .ShopPost-img{
+        width: 200px;
+        height: 100px;
+    }
+    
+    .ShopPostlist .ShopPost-img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .ShopPostlist .inner-ShopPostCard{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 460px){
+
+    .ShopPost-img{
+        height: 10rem;
+    }
+
+    .arrange-shop{
+        font-size: 15px;
+    }
+
+    .grid-shop span svg{
+        font-size: 25px;
+    }
+
+    .ShopPostlist .in
+
+    .ShopPostlist .ShopPost-img{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .ShopPostlist .ShopPost-img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .ShopPostlist p{
+        font-size: 10px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 400px){
+    .arrange-shop div:nth-child(2){
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    
+    .ShopPost{
+        gap: 10px;
+    }
+
+    .ShopPostlist .ShopPost-img{
+        width: 100px;
+        height: 50px;
+    }
+    
+    /* .ShopPostlist .ShopPost-img img{
+        width: 100%;
+        height: 100%;
+    } */
+
+    .ShopPostlist p{
+        font-size: 8px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 320px){
+    .ShopPost{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}

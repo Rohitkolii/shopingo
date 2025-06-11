@@ -1,0 +1,89 @@
+.DashboardPage{
+    width: 100%;
+}
+
+.dashContent{
+    width: 98%;
+    margin: 20px auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.dashTop{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.dashTop div{
+    padding: 30px 20px;
+    /* background-color: #614BC3; */
+    background-color: #fff;
+    /* background: linear-gradient(135deg, #0062ff00, #614BC3); */
+    border-radius: 12px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.125);
+    /* border: 1px solid rgba(0, 0, 0, 0.211); */
+    /* color: white; */
+}
+
+.dashTop div p:nth-child(1){
+    color: var(--main);
+    /* font-weight: 400; */
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    background-color: var(--fade);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.dashTop div p:nth-child(2){
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(72, 72, 72);
+    /* filter: drop-shadow(10px 10px 20px yellow); */
+}
+.dashTop div p:nth-child(3){
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(41, 41, 41);
+
+}
+
+/* .dashTop svg{
+    color: #614BC3;
+} */
+
+@media only screen and (max-width:700px){
+    .dashTop{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        margin: 15px 0;
+    }
+}
+@media only screen and (max-width:500px){
+    .dashContent{
+        width: 100%;
+        margin: 20px auto;
+        background-color: #f8f8f8;
+        padding: 10px;
+        border-radius: 12px;
+        height: 100%;
+    }
+}
+@media only screen and (max-width:350px){
+    .dashTop div p:nth-child(1){
+        margin-bottom: 0px;
+    }
+
+    .dashTop div{
+        padding: 10px;
+    }
+}

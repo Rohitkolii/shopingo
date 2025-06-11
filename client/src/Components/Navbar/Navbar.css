@@ -1,0 +1,259 @@
+.Navbar{
+    width: 80%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0px 0px; */
+    align-items: center;
+    height: 5.3rem;
+    /* background-color: rgb(222, 242, 252); */
+    /* padding: 0px 50px; */
+    /* box-shadow: 0px 1px 5px rgba(227, 227, 227, 0.5); */
+}
+
+/* .nav-logo h1{
+    color: black;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.nav-logo span{
+    color: #614BC3;
+} */
+
+.nav-logo img{
+    width: 200px;
+}
+
+#list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+#list a{
+    margin: 0px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#list li::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    background-color: black;
+    transition: .5s;
+}
+
+.cart-btn{
+    /* background-color: #54bbeb; */
+    align-items: center;
+    font-size: 25px;
+}
+
+
+#list li:hover::after{
+    width: 80%;
+}
+
+#list li:nth-child(5):hover::after{
+    width: 0%;
+    height: 2px;
+}
+#list li:nth-child(6):hover::after{
+    width: 0%;
+}
+
+.client-btn{
+    margin: 0px 4px;
+    margin-left: 30px;
+    padding: 6px 2px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.651);
+}
+
+
+.client-btn2{
+    background-color: white;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.client-btn2 a{
+    color: white;
+}
+
+.hamburger, .open-hamburger{
+    /* margin-right: 10px; */
+    display: none;
+}
+
+.hamburger .line1{
+    background-color: black;
+    width: 42px;
+    height: 4px;
+    margin: 6px 0;
+    transition: .5s;
+}
+.hamburger .line2{
+    background-color: black;
+    width: 42px;
+    height: 4px;
+    margin: 6px 0;
+    transition: .5s;
+}
+.hamburger .line3{
+    background-color: black;
+    width: 42px;
+    height: 4px;
+    margin: 6px 0;
+    transition: .5s;
+}
+
+.open-hamburger .line1{
+    background-color: black;
+    box-shadow: 1px 1px 5px gray;
+    width: 42px;
+    height: 5px;
+    margin: 5px 0;
+    transition: .5s;
+    transform: rotate(45deg) translateX(14px);
+}
+.open-hamburger .line2{
+    height: 5px;
+    margin: 5px 0;
+    transition: .5s;
+}
+.open-hamburger .line3{
+    background-color: black;
+    box-shadow: 1px 1px 5px gray;
+    width: 42px;
+    height: 5px;
+    margin: 5px 0;
+    transition: .5s;
+    transform: rotate(-45deg) translateX(14px);
+
+}
+
+
+.carti span{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 4px;
+    font-weight: 600;
+    font-size: 8px;
+    position: relative;
+    top: -20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .Navbar{
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width: 815px) {
+    .nav-links, .open-navlinks{
+        display: block;
+    }
+
+    .hamburger, .open-hamburger{
+        display: block;
+    }
+    
+    #list{
+        display: block;
+        position: absolute;
+        top: 4.8rem;
+        text-align: center;
+        /* background-color: rgb(187, 230, 250); */
+        background-color: white;
+        width: 100%;
+        height: 90vh;
+        line-height: 3.7;
+        transition: .6s;
+        z-index: 99;
+    }
+
+    .nav-links #list{
+        left: -0;
+    }
+
+    .open-navlinks #list{
+        left: -100%;
+    }
+
+    .client-btn{
+        margin: 10px 25px;
+        padding: 5px;
+    }
+
+    .client-btn2{
+        background-color: white;
+    }
+    
+    .Navbar{
+        padding: 0 40px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .Navbar{
+        /* height: 4.5rem; */
+        padding: 0 20px;
+    }
+
+    /* Hamburgrt menu mobile  */
+
+    .hamburger .line1{
+        background-color: black;
+        width: 35px;
+        height: 3px;
+        margin: 6px 0;
+        transition: .5s;
+    }
+    .hamburger .line2{
+        background-color: black;
+        width: 35px;
+        height: 3px;
+        margin: 6px 0;
+        transition: .5s;
+    }
+    .hamburger .line3{
+        background-color: black;
+        width: 35px;
+        height: 3px;
+        margin: 6px 0;
+        transition: .5s;
+    }
+    
+    .open-hamburger .line1{
+        background-color: black;
+        box-shadow: 1px 1px 5px gray;
+        width: 35px;
+        height: 3px;
+        margin: 5px 0;
+        transition: .5s;
+        transform: rotate(45deg) translateX(13px);
+    }
+    .open-hamburger .line2{
+        height: 5px;
+        margin: 5px 0;
+        transition: .5s;
+    }
+    .open-hamburger .line3{
+        background-color: black;
+        box-shadow: 1px 1px 5px gray;
+        width: 35px;
+        height: 3px;
+        margin: 5px 0;
+        transition: .5s;
+        transform: rotate(-45deg) translateX(13px);
+    
+    }
+
+}

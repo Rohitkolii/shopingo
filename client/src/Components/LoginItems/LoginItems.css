@@ -1,0 +1,103 @@
+.LoginItems{
+    width: 70%;
+    margin: auto;
+}
+.LoginItems form{
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    margin: auto;
+}
+
+.LoginItems form label{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.showpass svg{
+    font-size: 18px;
+}
+
+.showpass{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid gray;
+}
+
+.LoginItems input, .LoginItems:focus{
+    height: 40px;
+    /* width: 100%; */
+    border-radius: 10px;
+    border: transparent;
+    box-shadow: 1px 1px 5px gray;
+    outline: none;
+    padding: 20px;
+}
+
+.LoginItems button{
+    width: 90%;
+    height: 3rem;
+    border: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    /* background-color: rgb(0, 170, 255); */
+    background-color: #614BC3;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgb(68, 68, 68);
+    margin: 25px auto;
+    padding: 0;cursor: pointer;
+}
+.checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox p{
+    display: flex;
+}
+.checkbox input{
+    display: block;
+    text-align: left;
+    box-shadow: none;
+    width: 15px;
+    margin-right: 15px;
+}
+
+.checkbox a{
+    color: #614BC3;
+    text-decoration: none;
+}
+
+.Registration-para button{
+    text-decoration: none;
+    color: #614BC3;
+    background-color: transparent;
+    border: none;
+    font-weight: 00;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.google-login{
+    margin: 20px 0;
+    border-radius: 20px;
+    width: 100%;
+    height: 3rem;
+    box-shadow: 1px 1px 5px gray;
+}
+
+@media only screen and (max-width: 700px){
+    .LoginItems{
+        width: 90%;
+    }
+}

@@ -1,0 +1,95 @@
+.AddVehiclecon{
+    background-color: white;
+    /* height: 400px; */
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px 50px;
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.623);
+    border-radius: 12px;
+}
+
+.AddVehiclecon .row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* margin: 20px 0; */
+    gap: 10px;
+    width: 100%;
+}
+
+.AddVehiclecon .row .col{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+    width: 100%;
+}
+
+.AddVehiclecon input, .AddVehiclecon select, .AddVehiclecon textarea{
+    height: 45px;
+    width: 100%;
+    padding: 0 10px;
+    border: 1px solid rgba(128, 128, 128, 0.445);
+    border-radius: 12px;
+}
+
+.AddVehiclecon input[type="file"] {
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  visibility: none;
+  color: white;
+}
+
+.AddVehiclecon input:focus, .AddVehiclecon select:focus{
+    outline: transparent;
+}
+
+.AddVehiclecon .btn{
+    background-color: #614bc3;
+    color: white;
+    border: transparent;
+    width: fit-content;
+    padding:0px 25px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.AddVehiclecon label{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.AddVehiclecon svg{
+    color: #614bc3;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .AddVehiclecon{
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .AddVehiclecon .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* margin: 20px 0; */
+        gap: 10px;
+    }
+    
+    .AddVehiclecon{
+        background-color: white;
+        /* height: 400px; */
+        /* width: 80%; */
+        margin:50px auto;
+        padding: 20px;
+        box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.623);
+    }
+}
+@media only screen and (max-width: 500px) {
+    /* .col label{
+        font-size: 15px;
+    } */
+}

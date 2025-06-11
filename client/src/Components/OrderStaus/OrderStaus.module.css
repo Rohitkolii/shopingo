@@ -1,0 +1,56 @@
+.orderStatus{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.578);
+    width: 350px;
+}
+
+.orderStatus_item{
+    background-color: var(--fade);
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.43);
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-left: 3px solid var(--main);
+    margin-top: 20px;
+}
+
+.orderStatus h2, .orderStatus svg{
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.orderStatus_item img{
+    width: 100px;
+    height: 100px;
+    /* box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.43); */
+    border-radius: 6px;
+    /* object-fit: contain; */
+}
+.orderStatus_item p:nth-child(1){
+    font-size: 16px;
+    font-weight: 500;
+}
+.orderStatus_item p:nth-child(2){
+    font-size: 13px;
+}
+
+.Statusoption{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+.Statusoption select{
+    padding: 10px 5px;
+    border-radius: 6px;
+}
+
+.Statusoption select:focus{
+    border: 1px solid var(--main);
+}
